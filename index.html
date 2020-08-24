@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 14 - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="XITO_V2.css" rel="stylesheet">
+<link href="index.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="transition.min.js"></script>
+<script src="collapse.min.js"></script>
+<script src="dropdown.min.js"></script>
+<script src="wb.newsviewer.min.js"></script>
+<script src="wwb14.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $('#wb_Heading1').addClass('visibility-hidden');
+   $("a[href*='#LayoutGrid1']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid1').offset().top }, 600, 'easeOutSine');
+   });
+   $(document).on('click','.ThemeableMenu2-navbar-collapse.in',function(e)
+   {
+      if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+      {
+         $(this).collapse('hide');
+      }
+   });
+   $("a[href*='#intro']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#intro').offset().top }, 600, 'easeOutQuad');
+   });
+   function Heading1Scroll()
+   {
+      var $obj = $("#wb_Heading1");
+      if (!$obj.hasClass("in-viewport") && $obj.inViewPort(false))
+      {
+         $obj.addClass("in-viewport");
+         AnimateCss('wb_Heading1', 'vanish-in', 100, 1000);
+      }
+      else
+      if ($obj.hasClass("in-viewport") && !$obj.inViewPort(true))
+      {
+         $obj.removeClass("in-viewport");
+         AnimateCss('wb_Heading1', 'animate-fade-out', 0, 0);
+      }
+   }
+   if (!$('#wb_Heading1').inViewPort(true))
+   {
+      $('#wb_Heading1').addClass("in-viewport");
+   }
+   Heading1Scroll();
+   $(window).scroll(function(event)
+   {
+      Heading1Scroll();
+   });
+   var NewsFeedTicker1_Data = new Array();
+   NewsFeedTicker1_Data[0] = ["http://", "Guia pin transistores.", "", ""];
+   NewsFeedTicker1_Data[1] = ["http://", "Diodos led, valores y resistencias.", "", ""];
+   NewsFeedTicker1_Data[2] = ["http://", "Diodos y su votaje maximo.", "", ""];
+   NewsFeedTicker1_Data[3] = ["http://", "Contenido caja transistores.", "", ""];
+   $("#NewsFeedTicker1").newsviewer({ mode: 'rotate', pause: 2000, pause: 2000, animation: 4, animationDuration: 500, sortOrder: 0, dataSource: 'local', param: NewsFeedTicker1_Data, target: '_self', includeDate: false, maxItems: 10});
+});
+</script>
+</head>
+<body>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+<div id="wb_ThemeableMenu2" style="display:inline-block;width:100%;z-index:1000;">
+<div id="ThemeableMenu2" class="ThemeableMenu2" style ="width:100%;height:auto !important;">
+<div class="container">
+<a id="ThemeableMenu2-logo" href="#"><img alt="" title="" src="images/logo32.jpg"></a>
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ThemeableMenu2-navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="ThemeableMenu2-navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="">
+<a href="./index.html">Inicio</a>
+</li>
+<li class="">
+<a href="./transistores.html">Transistores</a>
+</li>
+<li class="">
+<a href="#portfolio">Leds</a>
+</li>
+<li class="">
+<a href="#contact">Diodos</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="intro" style="position:relative;text-align:center;width:100%;height:100%;float:left;display:block;z-index:3;">
+<div id="intro-overlay"></div>
+<div id="intro_Container" style="width:970px;position:relative;margin-left:auto;margin-right:auto;text-align:left;">
+<div id="wb_Heading1" style="position:absolute;left:168px;top:189px;width:618px;height:57px;z-index:1;">
+<h1 id="Heading1">WEB ELECTRONICA v 1,0</h1></div>
+<div id="NewsFeedTicker1" style="overflow:hidden;position:absolute;left:57px;top:254px;width:825px;height:84px;z-index:2;">
+</div>
+</div>
+</div>
+</body>
+</html>

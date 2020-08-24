@@ -1,0 +1,143 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Untitled Page</title>
+<meta name="generator" content="WYSIWYG Web Builder 14 - http://www.wysiwygwebbuilder.com">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="XITO_V2.css" rel="stylesheet">
+<link href="leds.css" rel="stylesheet">
+<script src="jquery-1.12.4.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+<script src="transition.min.js"></script>
+<script src="collapse.min.js"></script>
+<script src="dropdown.min.js"></script>
+<script src="wb.lazyload.min.js"></script>
+<link rel="stylesheet" href="magnificpopup/magnific-popup.css">
+<script src="magnificpopup/jquery.magnific-popup.min.js"></script>
+<script>
+$(document).ready(function()
+{
+   $("a[href*='#LayoutGrid1']").click(function(event)
+   {
+      event.preventDefault();
+      $('html, body').stop().animate({ scrollTop: $('#wb_LayoutGrid1').offset().top }, 600, 'easeOutSine');
+   });
+   $(document).on('click','.ThemeableMenu2-navbar-collapse.in',function(e)
+   {
+      if ($(e.target).is('a') && ($(e.target).attr('class') != 'dropdown-toggle')) 
+      {
+         $(this).collapse('hide');
+      }
+   });
+   $("a[data-rel='gallery']").attr('rel', 'gallery');
+   $("#gallery").magnificPopup({delegate:'a', type:'image', gallery: {enabled: true, navigateByImgClick: true}});
+   $('img[data-src]').lazyload();
+});
+</script>
+</head>
+<body>
+<div id="wb_LayoutGrid1">
+<div id="LayoutGrid1">
+<div class="row">
+<div class="col-1">
+<div id="wb_ThemeableMenu2" style="display:inline-block;width:100%;z-index:1000;">
+<div id="ThemeableMenu2" class="ThemeableMenu2" style ="width:100%;height:auto !important;">
+<div class="container">
+<a id="ThemeableMenu2-logo" href="#"><img alt="" title="" src="images/logo32.jpg"></a>
+<div class="navbar-header">
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".ThemeableMenu2-navbar-collapse">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+</div>
+<div class="ThemeableMenu2-navbar-collapse collapse">
+<ul class="nav navbar-nav">
+<li class="">
+<a href="#profile">Inicio</a>
+</li>
+<li class="">
+<a href="#skills">Transistores</a>
+</li>
+<li class="">
+<a href="#portfolio">Leds</a>
+</li>
+<li class="">
+<a href="#contact">Diodos</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="wb_galleryGrid">
+<div id="galleryGrid">
+<div class="row">
+<div class="col-1">
+<div id="wb_galleryHeading1" style="display:inline-block;width:100%;z-index:1;">
+<h1 id="galleryHeading1">LISTADO LEDS</h1>
+</div>
+<div id="wb_galleryHeading2" style="display:inline-block;width:100%;z-index:2;">
+<h1 id="galleryHeading2">VOLTAJES E INTENSIDADES</h1>
+</div>
+<div id="wb_gallery" style="display:inline-block;width:100%;z-index:3;">
+<div id="gallery">
+   <div class="thumbnails">
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/TABLA LED 1.JPG" data-rel=""><img alt="" src="images/placeholder.gif" data-src="images/TABLA LED 1.JPG"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/RESISTENCIAS.JPG" data-rel=""><img alt="" src="images/placeholder.gif" data-src="images/RESISTENCIAS.JPG"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/BOMBIN.jpg" data-rel=""><img alt="" src="images/placeholder.gif" data-src="images/BOMBIN.jpg"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/calcolo-resistenza-led-1.jpg" data-rel=""><img alt="" src="images/placeholder.gif" data-src="images/calcolo-resistenza-led-1.jpg"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/calcolo-resistenza-led-2.jpg" data-rel=""><img alt="" src="images/placeholder.gif" data-src="images/calcolo-resistenza-led-2.jpg"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/tabla-equivalencias-LED-iluminika.png" data-rel=""><img alt="" src="images/placeholder.gif" data-src="images/tabla-equivalencias-LED-iluminika.png"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/Valores-de-Led-de-potencia.jpg" data-rel=""><img alt="" src="images/placeholder.gif" data-src="images/Valores-de-Led-de-potencia.jpg"></a>
+</div>
+      </div>
+      <div class="thumbnail">
+<div class="frame">
+         <a href="images/tabla-comparativa-led-3528-5050-5630.jpg" data-rel=""><img alt="" src="images/placeholder.gif" data-src="images/tabla-comparativa-led-3528-5050-5630.jpg"></a>
+</div>
+      </div>
+      <div class="clearfix visible-col3"></div>
+   </div>
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
